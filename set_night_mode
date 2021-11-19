@@ -1,0 +1,11 @@
+  #!/bin/bash
+  xfconf-query --channel xsettings -p /Net/ThemeName --set Matcha-dark-sea 
+  xfconf-query -c xfwm4 -p /general/theme --set Matcha-dark-sea
+  xfconf-query -c xsettings -p /Net/IconThemeName  --set Papirus
+
+  xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path --set /home/adam/Nextcloud/Media/Pictures_Videos/Generative-art/20190602_132228_circlish_circle_perlin_1138_2069.png
+  xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorDP-3/workspace0/last-image --set /home/adam/Nextcloud/Media/Pictures_Videos/Generative-art/20190602_132228_circlish_circle_perlin_1138_2069.png
+
+  xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorDP-2/workspace0/last-image --set /home/adam/Nextcloud/Media/Pictures_Videos/Generative-art/20190602_132228_circlish_circle_perlin_1138_2069.png
+  xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitoreDP-1/workspace0/last-image --set /home/adam/Nextcloud/Media/Pictures_Videos/Generative-art/20190602_132228_circlish_circle_perlin_1138_2069.png
+

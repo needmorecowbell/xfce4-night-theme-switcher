@@ -1,0 +1,33 @@
+#!/usr/bin/python
+from datetime import datetime
+import subprocess
+
+'''
+For use with xfce and the genmon plugin indicator
+'''
+
+sunrise = "8:00"  # 24hr time for day mode to start
+sunset = "18:00"  # 24hr time for night mode to start
+tooltip = "Night Mode: 8am - 6pm\nClick to temporarily toggle"  # tooltip text
+
+root_path = "/home/adam/Applications/scripts/night-theme-switcher/"
+image_path = root_path+"moon.png" # static indicator icon
+toggle_command = "toggle_theme" # toggle theme on indicator click
+
+_output = []
+_now = datetime.now()
+
+# every gen_mon periodic check, set the correct theming based off time
+if datetime.strptime(sunrise, "%H:%M").time() < _now.time() < datetime.strptime(sunset, "%H:%M").time():
+    subprocess.run(["sh", root_path+"set_day_mode"])
+else:
+    subprocess.run(["sh", root_path+"set_night_mode"])
+
+if image_path:
+    _output.append(f"<img>{image_path}</img>")
+if toggle_command:
+    _output.append(f"<click>{toggle_command}</click>")
+if tooltip:
+    _output.append(f"<tool>{tooltip}</tool>")
+
+[print(el) for el in _output]

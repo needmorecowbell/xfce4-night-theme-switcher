@@ -1,0 +1,11 @@
+  #!/bin/bash
+  xfconf-query --channel xsettings -p /Net/ThemeName --set Matcha-light-sea 
+  xfconf-query -c xfwm4 -p /general/theme --set Matcha-light-sea
+  xfconf-query -c xsettings -p /Net/IconThemeName  --set Papirus
+
+
+  xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path --set /home/adam/Nextcloud/Media/Pictures_Videos/Generative-art/perlin_inverted.png
+  xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorDP-3/workspace0/last-image --set /home/adam/Nextcloud/Media/Pictures_Videos/Generative-art/perlin_inverted.png
+
+  xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorDP-2/workspace0/last-image --set /home/adam/Nextcloud/Media/Pictures_Videos/Generative-art/perlin_inverted.png
+  xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitoreDP-1/workspace0/last-image --set /home/adam/Nextcloud/Media/Pictures_Videos/Generative-art/perlin_inverted.png
